@@ -49,7 +49,7 @@ def send_email(content):
     s.sendmail(me, [you], msg.as_string())
     s.quit()
 
-p = re.compile(u'.*赤柱.*')
+p = re.compile(u'.*屯門.*')
 
 d = feedparser.parse('http://www.td.gov.hk/tc/special_news/spnews_rss.xml')
 for post in d.entries:
