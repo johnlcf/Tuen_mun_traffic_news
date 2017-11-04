@@ -53,7 +53,7 @@ p = re.compile(u'.*赤柱.*')
 
 d = feedparser.parse('http://www.td.gov.hk/tc/special_news/spnews_rss.xml')
 for post in d.entries:
-    print post.title + ": " + post.link + "\n"
+    #print post.title + ": " + post.link + "\n"
     if p.match(post.title):
         print "*** send email ***"
         send_email(post.title)
